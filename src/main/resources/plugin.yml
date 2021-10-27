@@ -1,0 +1,77 @@
+name: FireFly-Utils
+version: '${project.version}'
+main: com.Microsoft.FireFlyUtils
+api-version: 1.17
+authors: [ MicrosoftWord12 ]
+description: Utilities for FireFly like gmc and so forth
+
+commands:
+  Gamemode:
+    description: Changes the gamemode
+    permission: FireFly-Utils.Gamemode
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /gamemode <GAMEMODE>
+    aliases:
+      - gms
+      - gmc
+      - gmsp
+      - gma
+
+  Fly:
+    description: You can fly
+    permission: FireFly-Utils.Fly
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /fly or /fly <PERSON>
+    aliases: fly
+
+  Kill:
+    description: You can now kill people or yourself
+    permission: FireFly-Utils.Kill
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /Kill or /kill <PERSON>
+    aliases: kill
+
+  Weather:
+    description: Sets the weather
+    permission: FireFly-Utils.Weather
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /Weather <storm, thunder, clear>
+    aliases: weather
+
+  kick:
+    description: Kicks a player
+    permission: FireFly-Utils.Kick
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /Kick <PLAYER> <REASON>
+    aliases: kick
+
+  Ban:
+    description: Bans a player from the serer
+    permission: FireFly-Utils.Ban
+    permission-message: "&cYou are missing the correct permissions"
+    usage: /Ban <PLAYER> <REASON>
+    aliases: ban
+
+permissions:
+  FireFly-Utils.Gamemode:
+    description: Allows you to change gamemode
+    default: op
+
+  FireFly-Utils.Fly:
+    description: Allows you to fly
+    default: op
+
+  FireFly-Utils.Kill:
+    description: Allows you to kill yourself or someone else
+    default: op
+
+  FireFly-Utils.Kick:
+    description: Allows you to kick people
+    default: op
+
+  FireFly-Utils.Ban:
+    description: Allows you to ban people
+    default: op
+
+
+
