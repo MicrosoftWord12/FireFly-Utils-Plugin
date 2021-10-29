@@ -30,5 +30,13 @@ public class Message {
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
 
+    public static void serverStartMessage(String message){
+        Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&a[FireFly-Utils] " + message));
+    }
+
+    public static void serverEndMessage(String message){
+        Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.translateAlternateColorCodes('&', "&c[FireFly-Utils] " + message));
+    }
+
 
 }

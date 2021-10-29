@@ -52,6 +52,17 @@ commands:
     usage: /Ban <PLAYER> <REASON>
     aliases: ban
 
+  God:
+    description: Makes a player invulnerable
+    permission: FireFly-Utils.God
+    permission-message: "&cYou aer missing the correct permissions"
+    usage: /God or /God <PLAYER>
+    aliases: god
+
+  SetDefaultSettings:
+    description: Sets the Default Settings
+    usage: /SetDefaultSettings
+
 permissions:
   FireFly-Utils.Gamemode:
     description: Allows you to change gamemode
@@ -72,6 +83,19 @@ permissions:
   FireFly-Utils.Ban:
     description: Allows you to ban people
     default: op
+
+  FireFly-Utils.Unban:
+    description: Allows you to unban people
+    default: op
+
+  FireFly-Utils.Weather:
+    description: Allows you to change the weather
+    default: op
+
+  FireFly-Utils.God:
+    description: Allows you to become God
+    default: op
+
 
 
 
