@@ -1,5 +1,6 @@
 package com.Microsoft.AdminCommands.Moderation;
 
+import com.Microsoft.Utils.BanConfig;
 import com.Microsoft.Utils.Message;
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
@@ -20,11 +21,11 @@ public class Ban implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender instanceof Player)) return false;
+//        if (!(sender instanceof Player)) return false;
         Player player = (Player) sender;
         if (!player.hasPermission("FireFly-Utils.Ban")) return false;
         Player target = Bukkit.getPlayerExact(args[0]);
-        BanList banList = Bukkit.getBanList(BanList.Type.NAME);
+//        BanList banList = Bukkit.getBanList(BanList.Type.NAME);
         for (int i = 1; i < args.length; i++){
             reason += args[i] + " ";
         }
@@ -38,7 +39,9 @@ public class Ban implements CommandExecutor {
             return true;
         }
         Message.serverBanMessage(String.format("&a%s has been Banned by %s for %s", target.getDisplayName(), player.getDisplayName(), reason));
-        banList.addBan(target.getDisplayName(), reason, null, player.getDisplayName());
+//        b.addBan(target.getDisplayName(), reason, null, null);
+        Bukkit.getBanList(BanList.Type.NAME).addBan(target.getName(), reason, null, null);
+        BanConfig.setBan(target.getName(), reason);
         target.kickPlayer(reason);
         return true;
     }

@@ -1,4 +1,4 @@
-package com.Microsoft.AdminCommands;
+package com.Microsoft.Members;
 
 import com.Microsoft.Utils.Message;
 import org.bukkit.Bukkit;
@@ -39,3 +39,4 @@ public class Weather implements CommandExecutor {
         return true;
     }
 }
+

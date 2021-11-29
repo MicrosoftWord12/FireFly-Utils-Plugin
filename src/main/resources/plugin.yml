@@ -45,23 +45,41 @@ commands:
     usage: /Kick <PLAYER> <REASON>
     aliases: kick
 
-  Ban:
+  ban:
     description: Bans a player from the serer
     permission: FireFly-Utils.Ban
     permission-message: "&cYou are missing the correct permissions"
-    usage: /Ban <PLAYER> <REASON>
-    aliases: ban
+    usage: /PermRemove <PLAYER> <REASON>
+    aliases:
+      - rmPlayer
+      - playerRm
+      - Ban
 
   God:
     description: Makes a player invulnerable
     permission: FireFly-Utils.God
-    permission-message: "&cYou aer missing the correct permissions"
+    permission-message: "&cYou are missing the correct permissions"
     usage: /God or /God <PLAYER>
     aliases: god
 
-  SetDefaultSettings:
-    description: Sets the Default Settings
-    usage: /SetDefaultSettings
+  Time:
+    description: Able to set the timwe
+    permission: FireFly-Utils.Time
+    permission-message: "You are missing the correct permissions"
+    usage: /day or /night
+    aliases:
+      - day
+      - night
+
+  Invisible:
+    description: Able to go invisible
+    permission: FireFly-Utils.Invisible
+    permission-message: "You are missing the correct permissions"
+    usage: /Invisible
+    aliases:
+      - invis
+      - Invis
+
 
 permissions:
   FireFly-Utils.Gamemode:
@@ -94,6 +112,14 @@ permissions:
 
   FireFly-Utils.God:
     description: Allows you to become God
+    default: op
+
+  FireFly-Utils.Invisible:
+    description: Allows you to go invisible
+    default: op
+
+  FireFly-Utils.Time:
+    description: Allows you to change time
     default: op
 
 

@@ -22,12 +22,10 @@ public class Kill implements CommandExecutor {
         }
 
         if (args.length == 1){
-            Message.playerMessage(player, "&d hahaha I see a war brewing :)");
+            Message.playerMessage(player, "&dhahaha I see a war brewing :)");
             Player target = Bukkit.getPlayerExact(args[0]);
             target.setHealth(0);
         }
-
-        System.out.println("test");
 
 
         return true;
